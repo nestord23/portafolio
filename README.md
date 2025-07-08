@@ -1,69 +1,90 @@
-# React + TypeScript + Vite
+# 🎨 Portafolio de Néstor Montenegro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un portafolio web profesional y moderno para Néstor Montenegro, Desarrollador Frontend especializado en React, UX/UI y WordPress.
 
-Currently, two official plugins are available:
+## 🌟 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Diseño Moderno**: Interfaz limpia y profesional con animaciones suaves
+- **Responsivo**: Optimizado para todos los dispositivos
+- **Paleta de Colores Profesional**: Azul cielo, verde menta, blanco y tonos tierra
+- **Animaciones Interactivas**: Usando Framer Motion para una experiencia fluida
+- **Navegación Suave**: Scroll suave entre secciones
+- **Tipografía Moderna**: Fuente Poppins para una apariencia profesional
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - Framework principal
+- **TypeScript** - Tipado estático
+- **Vite** - Herramienta de construcción
+- **Framer Motion** - Animaciones
+- **Lucide React** - Iconos
+- **CSS3** - Estilos personalizados
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📱 Secciones del Portafolio
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 🏠 Inicio
+- Foto profesional/ilustración
+- Presentación con título y eslogan
+- Call-to-action para ver proyectos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 👨‍💻 Sobre Mí
+- Descripción profesional
+- Grid de habilidades técnicas
+- Especialidades y enfoques
+
+### 🚀 Proyectos
+- Showcase de proyectos destacados
+- Tecnologías utilizadas
+- Enlaces a demos y código
+
+### 💼 Experiencia
+- Timeline interactivo
+- Experiencia laboral detallada
+- Certificaciones y educación
+
+### 📞 Contacto
+- Información de contacto
+- Enlaces a redes sociales
+- Servicios ofrecidos
+
+## 🎨 Paleta de Colores
+
+```css
+--primary-blue: #87CEEB     /* Azul cielo */
+--primary-mint: #98FB98     /* Verde menta */
+--primary-white: #FFFFFF    /* Blanco */
+--primary-gray: #F5F5F5     /* Gris suave */
+--accent-beige: #F5E6D3     /* Beige/arena */
+--text-dark: #2C3E50        /* Texto oscuro */
+--text-light: #6C7B7F       /* Texto claro */
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Instalación y Uso
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Instalar dependencias**
+```bash
+npm install
 ```
+
+2. **Ejecutar en desarrollo**
+```bash
+npm run dev
+```
+
+3. **Compilar para producción**
+```bash
+npm run build
+```
+
+## 📧 Información de Contacto
+
+- **Email**: realdanii135@gmail.com
+- **Teléfono**: +502 57886144
+- **LinkedIn**: [in/Nestor](https://linkedin.com/in/Nestor)
+- **GitHub**: [github.com/nestor](https://github.com/nestor)
+
+---
+
+**Desarrollado con ❤️ y mucho café ☕**
+
+*"Creo experiencias digitales limpias y funcionales"*
