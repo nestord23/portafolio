@@ -43,6 +43,7 @@ const Header = () => {
           <ul className="nav-links">
             <li><a href="#inicio" onClick={() => scrollToSection('inicio')}>Inicio</a></li>
             <li><a href="#sobre-mi" onClick={() => scrollToSection('sobre-mi')}>Sobre mí</a></li>
+            <li><a href="#proyectos" onClick={() => scrollToSection('proyectos')}>Proyectos</a></li>
             <li><a href="#experiencia" onClick={() => scrollToSection('experiencia')}>Experiencia</a></li>
             <li><a href="#contacto" onClick={() => scrollToSection('contacto')}>Contacto</a></li>
           </ul>

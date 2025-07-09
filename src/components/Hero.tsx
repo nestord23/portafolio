@@ -64,14 +64,14 @@ const Hero = () => {
           
           <motion.button 
             className="cta-button"
-            onClick={() => scrollToSection('sobre-mi')}
+            onClick={() => scrollToSection('proyectos')}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Conoce más sobre mí
+            Ver mis proyectos
           </motion.button>
         </motion.div>
       </div>
