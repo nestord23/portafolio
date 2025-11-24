@@ -1821,7 +1821,7 @@
   }
 /* Mobile Navigation Styles */
 .mobile-menu-toggle {
-  display: none;
+  display: none; /* Hidden by default */
   background: transparent;
   border: none;
   color: var(--text-light);
@@ -1829,6 +1829,14 @@
   z-index: 1001;
   padding: 0.5rem;
   box-shadow: none;
+}
+
+/* Ensure mobile elements are hidden on desktop */
+@media (min-width: 769px) {
+  .mobile-menu-toggle,
+  .mobile-nav-overlay {
+    display: none !important;
+  }
 }
 
 .mobile-menu-toggle:hover {

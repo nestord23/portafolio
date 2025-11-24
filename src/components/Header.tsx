@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,15 +51,6 @@ const Header = () => {
             <li><a href="#experiencia" onClick={(e) => { e.preventDefault(); scrollToSection('experiencia'); }}>Experiencia</a></li>
             <li><a href="#contacto" onClick={(e) => { e.preventDefault(); scrollToSection('contacto'); }}>Contacto</a></li>
           </ul>
-
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="mobile-menu-toggle"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </nav>
       </div>
 
