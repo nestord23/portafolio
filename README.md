@@ -1,90 +1,93 @@
-# 🎨 Portafolio de Néstor Montenegro
+# ⚡ Portafolio de Néstor Montenegro
 
-Un portafolio web profesional y moderno para Néstor Montenegro, Desarrollador Frontend especializado en React, UX/UI y WordPress.
+Un portafolio web moderno y de alto rendimiento para Néstor Montenegro, Desarrollador Full Stack especializado en el ecosistema React. Diseñado con un enfoque en estética premium, animaciones fluidas y optimización técnica.
 
-## 🌟 Características
+![Preview](./public/IconoPagina.png)
 
-- **Diseño Moderno**: Interfaz limpia y profesional con animaciones suaves
-- **Responsivo**: Optimizado para todos los dispositivos
-- **Paleta de Colores Profesional**: Azul cielo, verde menta, blanco y tonos tierra
-- **Animaciones Interactivas**: Usando Framer Motion para una experiencia fluida
-- **Navegación Suave**: Scroll suave entre secciones
-- **Tipografía Moderna**: Fuente Poppins para una apariencia profesional
+## 🌟 Características Destacadas
 
-## 🛠️ Tecnologías Utilizadas
+- **🎨 Diseño Premium**: Interfaz "Dark Mode" con estética Glassmorphism, degradados vibrantes en tonos púrpura y efectos de neón.
+- **📱 Totalmente Responsivo**: Experiencia nativa en móviles con menú de navegación táctil y layouts adaptables.
+- **⚡ Alto Rendimiento**: 
+  - **Lazy Loading**: Carga diferida de secciones pesadas para un inicio instantáneo.
+  - **Code Splitting**: Optimización de bundles con Vite.
+- **✨ Animaciones Avanzadas**: 
+  - Efectos de escritura automática (`typewriter-effect`).
+  - Efectos de inclinación 3D (`react-parallax-tilt`).
+  - Transiciones suaves entre secciones con `framer-motion`.
+- **🛠️ Arquitectura Limpia**: Código modular, tipado estricto con TypeScript y componentes reutilizables.
 
-- **React 19** - Framework principal
-- **TypeScript** - Tipado estático
-- **Vite** - Herramienta de construcción
-- **Framer Motion** - Animaciones
-- **Lucide React** - Iconos
-- **CSS3** - Estilos personalizados
+## 🛠️ Stack Tecnológico
 
-## 📱 Secciones del Portafolio
+### Core
+- **React 19** - Biblioteca de UI
+- **TypeScript** - Seguridad de tipos y escalabilidad
+- **Vite** - Build tool de última generación
 
-### 🏠 Inicio
-- Foto profesional/ilustración
-- Presentación con título y eslogan
-- Call-to-action para ver proyectos
+### Estilos & UI
+- **CSS3 Variables** - Sistema de diseño flexible
+- **Framer Motion** - Motor de animaciones
+- **Lucide React & React Icons** - Iconografía vectorial
+- **Glassmorphism** - Estilo visual translúcido
 
-### 👨‍💻 Sobre Mí
-- Descripción profesional
-- Grid de habilidades técnicas
-- Especialidades y enfoques
+### Librerías Adicionales
+- `react-parallax-tilt` - Efectos interactivos en imágenes
+- `typewriter-effect` - Animaciones de texto dinámicas
 
-### 🚀 Proyectos
-- Showcase de proyectos destacados
-- Tecnologías utilizadas
-- Enlaces a demos y código
+## 📱 Secciones
 
-### 💼 Experiencia
-- Timeline interactivo
-- Experiencia laboral detallada
-- Certificaciones y educación
+1. **🏠 Hero**: Presentación impactante con efecto parallax y texto dinámico.
+2. **👨‍💻 Sobre Mí**: Narrativa profesional, estadísticas clave y grid de habilidades categorizadas.
+3. **🚀 Proyectos**: Grid moderno de tarjetas con efectos hover, stack tecnológico y enlaces a demos/código.
+4. **💼 Experiencia**: Timeline vertical detallando trayectoria profesional.
+5. **📞 Contacto**: Información directa y enlaces a redes sociales.
 
-### 📞 Contacto
-- Información de contacto
-- Enlaces a redes sociales
-- Servicios ofrecidos
+## 🎨 Sistema de Diseño
 
-## 🎨 Paleta de Colores
+El proyecto utiliza un sistema de variables CSS para mantener la consistencia:
 
 ```css
---primary-blue: #87CEEB     /* Azul cielo */
---primary-mint: #98FB98     /* Verde menta */
---primary-white: #FFFFFF    /* Blanco */
---primary-gray: #F5F5F5     /* Gris suave */
---accent-beige: #F5E6D3     /* Beige/arena */
---text-dark: #2C3E50        /* Texto oscuro */
---text-light: #6C7B7F       /* Texto claro */
+:root {
+  --primary-purple: #8b5cf6;       /* Color principal */
+  --primary-purple-light: #a78bfa; /* Acentos brillantes */
+  --primary-purple-dark: #7c3aed;  /* Profundidad */
+  --bg-dark: #0f0f23;             /* Fondo principal */
+  --bg-card: rgba(30, 30, 63, 0.5); /* Tarjetas translúcidas */
+  --text-light: #ffffff;          /* Texto principal */
+}
 ```
 
-## 🚀 Instalación y Uso
+## 🚀 Instalación y Desarrollo
 
-1. **Instalar dependencias**
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/nestord23/portafolio.git
+cd portafolio
+```
+
+2. **Instalar dependencias**
 ```bash
 npm install
 ```
 
-2. **Ejecutar en desarrollo**
+3. **Iniciar servidor de desarrollo**
 ```bash
 npm run dev
 ```
 
-3. **Compilar para producción**
+4. **Construir para producción**
 ```bash
 npm run build
 ```
 
-## 📧 Información de Contacto
+## 📧 Contacto
 
 - **Email**: realdanii135@gmail.com
 - **Teléfono**: +502 57886144
 - **LinkedIn**: [in/Nestor](https://linkedin.com/in/Nestor)
-- **GitHub**: [github.com/nestor](https://github.com/nestor)
+- **GitHub**: [github.com/nestord23](https://github.com/nestord23)
 
 ---
 
-**Desarrollado con ❤️ y mucho café ☕**
-
-*"Creo experiencias digitales limpias y funcionales"*
+**Desarrollado con ❤️ por Néstor Montenegro**
+*"Transformando ideas en experiencias digitales memorables"*
