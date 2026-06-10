@@ -249,7 +249,6 @@
   margin: 0;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
@@ -264,7 +263,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
-  padding: 12px;
+  padding: 2px;
 }
 
 .hero-subtitle {
