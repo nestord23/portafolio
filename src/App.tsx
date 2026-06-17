@@ -1,40 +1,35 @@
-import { Suspense, lazy } from 'react';
-import './App.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
+import { lazy, Suspense } from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import ShaderBackground from "./components/ShaderBackground";
 
-// Lazy load components that are not immediately visible
-const About = lazy(() => import('./components/About'));
-const Projects = lazy(() => import('./components/Projects'));
-const Experience = lazy(() => import('./components/Experience'));
-const Contact = lazy(() => import('./components/Contact'));
+const About = lazy(() => import("./components/About"));
+const Projects = lazy(() => import("./components/Projects"));
+const Experience = lazy(() => import("./components/Experience"));
+const Contact = lazy(() => import("./components/Contact"));
 
-// Loading fallback
-const PageLoader = () => (
-  <div className="page-loader">
-    Cargando...
-  </div>
-);
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <>
+      <ShaderBackground />
       <Header />
-      <main>
-        <Hero />
-        <Suspense fallback={<PageLoader />}>
-          <About />
-          <Projects />
-          <Experience />
-          <Contact />
-        </Suspense>
-      </main>
+      <Hero />
+      <Suspense fallback={
+        <div className="flex items-center justify-center py-20">
+          <div className="font-mono text-sm text-lime-neon animate-pulse">CARGANDO...</div>
+        </div>
+      }>
+        <About />
+        <Projects />
+        <Experience />
+        <Contact />
+      </Suspense>
       <Footer />
       <ScrollToTop />
-    </div>
+    </>
   );
-}
+};
 
 export default App;

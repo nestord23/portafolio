@@ -8,15 +8,18 @@ interface SectionHeaderProps {
 const SectionHeader = ({ title, subtitle }: SectionHeaderProps) => {
   return (
     <motion.div
+      className="text-center mb-16"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="section-header"
     >
-      <h2 className="gradient-text">{title}</h2>
-      <div className="section-divider" />
-      <p className="section-subtitle">{subtitle}</p>
+      <h2 className="text-3xl md:text-4xl font-sora font-bold mb-4 gradient-text">
+        {title}
+      </h2>
+      <p className="text-slate/60 max-w-2xl mx-auto font-mono text-sm">
+        {subtitle}
+      </p>
     </motion.div>
   );
 };

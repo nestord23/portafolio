@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import tailwindcss from "@tailwindcss/vite";
 
-// https://vite.dev/config/
 export default defineConfig({
   base: "/portafolio/",
-  plugins: [react()],
+  plugins: [react(), tailwindcss()],
   server: {
     port: 3000,
   },
@@ -14,6 +14,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react", "react-icons"],
+          three: ["three"],
         },
       },
     },

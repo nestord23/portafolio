@@ -8,7 +8,6 @@ import {
   FaExternalLinkAlt,
   FaGithub,
 } from "react-icons/fa";
-import SectionHeader from "./SectionHeader";
 import {
   SiBlockchaindotcom,
   SiWeb3Dotjs,
@@ -17,30 +16,32 @@ import {
   SiTypescript,
   SiVite,
 } from "react-icons/si";
+import SectionHeader from "./SectionHeader";
 
 const Projects = () => {
   const getTechIcon = (tech: string) => {
     const iconMap: Record<string, React.ReactElement> = {
-      React: <FaReact color="#61DAFB" />,
-      JavaScript: <FaJs color="#F7DF1E" />,
-      TypeScript: <SiTypescript color="#3178C6" />,
-      CSS3: <FaCss3Alt color="#1572B6" />,
-      HTML5: <FaHtml5 color="#E34F26" />,
-      "Node.js": <FaNodeJs color="#339933" />,
-      MongoDB: <SiMongodb color="#47A248" />,
-      Firebase: <SiFirebase color="#FFCA28" />,
-      Blockchain: <SiBlockchaindotcom color="#F7931A" />,
-      Web3: <SiWeb3Dotjs color="#F16822" />,
-      NFT: <SiBlockchaindotcom color="#F7931A" />,
-      API: <FaJs color="#F7DF1E" />,
-      Cryptocurrency: <SiBlockchaindotcom color="#F7931A" />,
-      "Local Storage": <FaJs color="#F7DF1E" />,
-      Finance: <FaJs color="#F7DF1E" />,
-      CRUD: <FaJs color="#F7DF1E" />,
-      WordPress: <FaHtml5 color="#21759B" />,
-      Vite: <SiVite color="#646CFF" />,
+      React: <FaReact color="#61DAFB" size={14} />,
+      JavaScript: <FaJs color="#F7DF1E" size={14} />,
+      TypeScript: <SiTypescript color="#3178C6" size={14} />,
+      CSS3: <FaCss3Alt color="#1572B6" size={14} />,
+      HTML5: <FaHtml5 color="#E34F26" size={14} />,
+      "Node.js": <FaNodeJs color="#339933" size={14} />,
+      MongoDB: <SiMongodb color="#47A248" size={14} />,
+      Firebase: <SiFirebase color="#FFCA28" size={14} />,
+      Blockchain: <SiBlockchaindotcom color="#F7931A" size={14} />,
+      Web3: <SiWeb3Dotjs color="#F16822" size={14} />,
+      NFT: <SiBlockchaindotcom color="#F7931A" size={14} />,
+      API: <FaJs color="#F7DF1E" size={14} />,
+      "Local Storage": <FaJs color="#F7DF1E" size={14} />,
+      Finance: <FaJs color="#F7DF1E" size={14} />,
+      CRUD: <FaJs color="#F7DF1E" size={14} />,
+      WordPress: <FaHtml5 color="#21759B" size={14} />,
+      Vite: <SiVite color="#646CFF" size={14} />,
+      Astro: <FaJs color="#FF5D01" size={14} />,
+      WebSockets: <FaNodeJs color="#339933" size={14} />,
     };
-    return iconMap[tech] || <FaJs color="#F7DF1E" />;
+    return iconMap[tech] || <FaJs color="#F7DF1E" size={14} />;
   };
 
   const projects = [
@@ -58,8 +59,8 @@ const Projects = () => {
       id: 2,
       title: "book-picker",
       description:
-        "Aplicacion Web para almacenar Lecturas y Realizar Clasificacion de lecturas y Eligir Proximas lecturas",
-      tech: ["Astro", "Javascript", "CSS3", "Node.js"],
+        "Aplicación Web para almacenar Lecturas y Realizar Clasificación de lecturas y Elegir Próximas lecturas",
+      tech: ["Astro", "JavaScript", "CSS3", "Node.js"],
       githubUrl: "https://github.com/nestord23/book-picker-fe",
       image: "/proyecto-crypto.jpg",
       featured: false,
@@ -99,7 +100,7 @@ const Projects = () => {
       id: 6,
       title: "Simsoms",
       description:
-        "Aplicación web moderna desarrollada con React y TypeScript usando Vite. Proyecto que demuestra habilidades en desarrollo frontend con TypeScript.",
+        "Aplicación web moderna desarrollada con React y TypeScript usando Vite.",
       tech: ["React", "TypeScript", "Vite"],
       githubUrl: "https://github.com/nestord23/simsoms",
       demoUrl: "https://simsoms-green.vercel.app",
@@ -109,82 +110,81 @@ const Projects = () => {
   ];
 
   return (
-    <section
-      id="proyectos"
-      className="projects section"
-    >
-      <div className="container">
+    <section id="proyectos" className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
         <SectionHeader
           title="Proyectos Destacados"
           subtitle="Una selección de mis trabajos más recientes, enfocados en React, Blockchain y experiencias de usuario modernas."
         />
 
-        <div className="projects-grid">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
+              className="glass-panel rounded-lg overflow-hidden group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="project-card"
+              whileHover={{ y: -5 }}
             >
-              {/* Project Header/Image Area */}
-              <div className="project-card-header">
-                <div className="project-card-overlay" />
-
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="project-card-icon"
-                >
+              <div className="relative h-40 bg-emerald-depth/30 flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                  style={{
+                    backgroundImage: `
+                      linear-gradient(rgba(171, 214, 0, 0.3) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(171, 214, 0, 0.3) 1px, transparent 1px)
+                    `,
+                    backgroundSize: "20px 20px",
+                  }}
+                />
+                <div className="relative z-10 text-5xl opacity-40 group-hover:opacity-70 transition-opacity duration-500">
                   {getTechIcon(project.tech[0])}
-                </motion.div>
-
+                </div>
                 {project.featured && (
-                  <div className="project-featured-badge">
-                    Destacado
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className="font-mono text-[10px] text-neon border border-lime-neon/30 px-2 py-0.5 tracking-wider bg-obsidian/80">
+                      DESTACADO
+                    </span>
                   </div>
                 )}
               </div>
 
-              {/* Content */}
-              <div className="project-card-body">
-                <h3 className="project-card-title">
+              <div className="p-5">
+                <h3 className="text-white/90 font-sora font-bold text-base mb-2">
                   {project.title}
                 </h3>
-
-                <p className="project-card-description">
+                <p className="text-slate/60 text-xs leading-relaxed mb-4 line-clamp-2">
                   {project.description}
                 </p>
 
-                <div className="project-tech-list">
-                  {project.tech.map((t, i) => (
-                    <span key={i} className="project-tech-tag">
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {project.tech.map((t) => (
+                    <span key={t} className="inline-flex items-center gap-1 font-mono text-[10px] text-slate/70 border border-white/5 px-2 py-0.5">
+                      {getTechIcon(t)}
                       {t}
                     </span>
                   ))}
                 </div>
 
-                <div className="project-actions">
+                <div className="flex gap-2">
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-btn-demo"
+                      className="flex items-center gap-1.5 font-mono text-xs text-obsidian bg-lime-neon px-3 py-1.5 hover:bg-lime-neon/90 transition-colors"
                     >
-                      <FaExternalLinkAlt size={14} /> Demo
+                      <FaExternalLinkAlt size={10} /> Demo
                     </a>
                   )}
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="project-btn-code"
+                    className="flex items-center gap-1.5 font-mono text-xs text-neon border border-lime-neon/30 px-3 py-1.5 hover:bg-lime-neon/10 transition-colors"
                   >
-                    <FaGithub size={16} /> Code
+                    <FaGithub size={12} /> Code
                   </a>
                 </div>
               </div>

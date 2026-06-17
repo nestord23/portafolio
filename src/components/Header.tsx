@@ -17,11 +17,8 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Fase 1: Detección de sección activa por scroll
       if (!isScrolling.current) {
         const scrollPosition = window.scrollY + 100;
-
         for (const section of sections) {
           const element = document.getElementById(section.id);
           if (element) {
@@ -37,64 +34,59 @@ const Header = () => {
         }
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Llamada inicial
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [sections]);
 
   const scrollToSection = (sectionId: string) => {
-    // Fase 2: Actualizar estado visual inmediatamente
     setActiveSection(sectionId);
-
-    // Fase 3: Ejecutar transición suave
     isScrolling.current = true;
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerElement = document.querySelector('.header') as HTMLElement;
-      const headerHeight = headerElement?.offsetHeight || 80;
+      const headerElement = document.querySelector(".header") as HTMLElement;
+      const headerHeight = headerElement?.offsetHeight || 70;
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerHeight;
-
       window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
+        top: elementPosition - headerHeight,
+        behavior: "smooth",
       });
-
-      // Fase 4: Resetear flag después del scroll
-      setTimeout(() => {
-        isScrolling.current = false;
-      }, 1000);
+      setTimeout(() => { isScrolling.current = false; }, 1000);
     }
   };
 
   return (
     <motion.header
-      className={`header ${isScrolled ? "scrolled" : ""}`}
+      className={`header fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "glass-panel" : "bg-transparent"
+      }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.3 }}
     >
-      <div className="container">
-        <nav className="nav">
-          <div className="logo gradient-text">
-            <img
-              src={`${import.meta.env.BASE_URL}IconoPagina.png`}
-              alt="Néstor Montenegro"
-            />
-          </div>
+      <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
+        <button
+          onClick={() => scrollToSection("inicio")}
+          className="font-mono text-neon text-sm tracking-wider hover:opacity-80 transition-opacity"
+        >
+          ~/nestor-montenegro
+        </button>
 
-          {/* Desktop Navigation */}
-          <ul className="nav-links desktop-nav">
+        <nav>
+          <ul className="hidden md:flex items-center gap-8">
             {sections.map((section) => (
               <li key={section.id}>
                 <a
                   href={`#${section.id}`}
-                  className={activeSection === section.id ? "active" : ""}
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection(section.id);
                   }}
+                  className={`font-mono text-xs tracking-widest uppercase transition-all duration-300 ${
+                    activeSection === section.id
+                      ? "text-neon"
+                      : "text-slate hover:text-lime-neon/70"
+                  }`}
                 >
                   {section.name}
                 </a>
