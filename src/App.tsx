@@ -17,17 +17,19 @@ const App = () => {
         <ShaderBackground />
       </Suspense>
       <Header />
-      <Hero />
-      <Suspense fallback={
-        <div className="flex items-center justify-center py-20">
-          <div className="font-mono text-sm text-lime-neon animate-pulse">CARGANDO...</div>
-        </div>
-      }>
-        <About />
-        <Projects />
-        <Experience />
-        <Contact />
-      </Suspense>
+      <main>
+        <Hero />
+        <Suspense fallback={
+          <div className="flex items-center justify-center py-20">
+            <div className="font-mono text-sm text-lime-neon animate-pulse">CARGANDO...</div>
+          </div>
+        }>
+          <About />
+          <Projects />
+          <Experience />
+          <Contact />
+        </Suspense>
+      </main>
       <Suspense fallback={null}>
         <Footer />
         <ScrollToTop />

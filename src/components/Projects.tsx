@@ -21,27 +21,27 @@ import SectionHeader from "./SectionHeader";
 const Projects = () => {
   const getTechIcon = (tech: string) => {
     const iconMap: Record<string, React.ReactElement> = {
-      React: <FaReact color="#61DAFB" size={14} />,
-      JavaScript: <FaJs color="#F7DF1E" size={14} />,
-      TypeScript: <SiTypescript color="#3178C6" size={14} />,
-      CSS3: <FaCss3Alt color="#1572B6" size={14} />,
-      HTML5: <FaHtml5 color="#E34F26" size={14} />,
-      "Node.js": <FaNodeJs color="#339933" size={14} />,
-      MongoDB: <SiMongodb color="#47A248" size={14} />,
-      Firebase: <SiFirebase color="#FFCA28" size={14} />,
-      Blockchain: <SiBlockchaindotcom color="#F7931A" size={14} />,
-      Web3: <SiWeb3Dotjs color="#F16822" size={14} />,
-      NFT: <SiBlockchaindotcom color="#F7931A" size={14} />,
-      API: <FaJs color="#F7DF1E" size={14} />,
-      "Local Storage": <FaJs color="#F7DF1E" size={14} />,
-      Finance: <FaJs color="#F7DF1E" size={14} />,
-      CRUD: <FaJs color="#F7DF1E" size={14} />,
-      WordPress: <FaHtml5 color="#21759B" size={14} />,
-      Vite: <SiVite color="#646CFF" size={14} />,
-      Astro: <FaJs color="#FF5D01" size={14} />,
-      WebSockets: <FaNodeJs color="#339933" size={14} />,
+      React: <FaReact color="#61DAFB" size={14} aria-hidden="true" />,
+      JavaScript: <FaJs color="#F7DF1E" size={14} aria-hidden="true" />,
+      TypeScript: <SiTypescript color="#3178C6" size={14} aria-hidden="true" />,
+      CSS3: <FaCss3Alt color="#1572B6" size={14} aria-hidden="true" />,
+      HTML5: <FaHtml5 color="#E34F26" size={14} aria-hidden="true" />,
+      "Node.js": <FaNodeJs color="#339933" size={14} aria-hidden="true" />,
+      MongoDB: <SiMongodb color="#47A248" size={14} aria-hidden="true" />,
+      Firebase: <SiFirebase color="#FFCA28" size={14} aria-hidden="true" />,
+      Blockchain: <SiBlockchaindotcom color="#F7931A" size={14} aria-hidden="true" />,
+      Web3: <SiWeb3Dotjs color="#F16822" size={14} aria-hidden="true" />,
+      NFT: <SiBlockchaindotcom color="#F7931A" size={14} aria-hidden="true" />,
+      API: <FaJs color="#F7DF1E" size={14} aria-hidden="true" />,
+      "Local Storage": <FaJs color="#F7DF1E" size={14} aria-hidden="true" />,
+      Finance: <FaJs color="#F7DF1E" size={14} aria-hidden="true" />,
+      CRUD: <FaJs color="#F7DF1E" size={14} aria-hidden="true" />,
+      WordPress: <FaHtml5 color="#21759B" size={14} aria-hidden="true" />,
+      Vite: <SiVite color="#646CFF" size={14} aria-hidden="true" />,
+      Astro: <FaJs color="#FF5D01" size={14} aria-hidden="true" />,
+      WebSockets: <FaNodeJs color="#339933" size={14} aria-hidden="true" />,
     };
-    return iconMap[tech] || <FaJs color="#F7DF1E" size={14} />;
+    return iconMap[tech] || <FaJs color="#F7DF1E" size={14} aria-hidden="true" />;
   };
 
   const projects = [
@@ -52,7 +52,6 @@ const Projects = () => {
         "Chat en tiempo real con WebSockets, implementado en backend y frontend, para comunicación instantánea entre usuarios.",
       tech: ["React", "WebSockets", "Node.js"],
       githubUrl: "https://github.com/nestord23/chat_FE",
-      image: "/proyecto-nft.jpg",
       featured: false,
     },
     {
@@ -62,7 +61,6 @@ const Projects = () => {
         "Aplicación Web para almacenar Lecturas y Realizar Clasificación de lecturas y Elegir Próximas lecturas",
       tech: ["Astro", "JavaScript", "CSS3", "Node.js"],
       githubUrl: "https://github.com/nestord23/book-picker-fe",
-      image: "/proyecto-crypto.jpg",
       featured: false,
     },
     {
@@ -72,7 +70,6 @@ const Projects = () => {
         "Aplicación para gestión y control de presupuestos personales. Permite registrar ingresos, gastos y visualizar el balance financiero.",
       tech: ["React", "Local Storage", "Finance"],
       githubUrl: "https://github.com/nestord23/proyecto-presupuesto",
-      image: "/proyecto-budget.jpg",
       featured: false,
     },
     {
@@ -82,7 +79,6 @@ const Projects = () => {
         "Sistema de gestión de clientes con funcionalidades CRUD completas. Permite agregar, editar, eliminar y buscar clientes de manera eficiente.",
       tech: ["React", "CRUD", "Local Storage"],
       githubUrl: "https://github.com/nestord23/Administrador-de-Clientes-React",
-      image: "/proyecto-clientes.jpg",
       featured: false,
     },
     {
@@ -93,7 +89,6 @@ const Projects = () => {
       tech: ["React", "HTML5", "CSS3"],
       githubUrl: "https://github.com/nestord23/el-senor-de-la-merced",
       demoUrl: "https://elsenordelamerced.vercel.app/",
-      image: "/proyecto-merced.jpg",
       featured: true,
     },
     {
@@ -104,7 +99,6 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Vite"],
       githubUrl: "https://github.com/nestord23/simsoms",
       demoUrl: "https://simsoms-green.vercel.app",
-      image: "/proyecto-simsoms.jpg",
       featured: true,
     },
   ];
@@ -175,7 +169,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-1.5 font-mono text-xs text-obsidian bg-lime-neon px-3 py-1.5 hover:bg-lime-neon/90 transition-colors"
                     >
-                      <FaExternalLinkAlt size={10} /> Demo
+                      <FaExternalLinkAlt size={10} aria-hidden="true" /> Demo
                     </a>
                   )}
                   <a
@@ -184,7 +178,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 font-mono text-xs text-neon border border-lime-neon/30 px-3 py-1.5 hover:bg-lime-neon/10 transition-colors"
                   >
-                    <FaGithub size={12} /> Code
+                      <FaGithub size={12} aria-hidden="true" /> Code
                   </a>
                 </div>
               </div>

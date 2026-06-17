@@ -34,8 +34,9 @@ const Hero = () => {
           <div className="glow-border p-1">
             <div className="w-48 h-48 lg:w-56 lg:h-56 overflow-hidden">
               <img
-                src={`${import.meta.env.BASE_URL}fotoPerfil.jpg`}
+                src={`${import.meta.env.BASE_URL}fotoPerfil.webp`}
                 alt="Néstor Montenegro"
+                fetchPriority="high"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
