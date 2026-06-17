@@ -10,6 +10,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: "autoUpdate",
+      injectRegister: "inline",
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,png,jpg,jpeg,webp,gif,ico}"],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
