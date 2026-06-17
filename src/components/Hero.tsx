@@ -31,13 +31,13 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="glow-border p-1">
-            <div className="w-48 h-48 lg:w-56 lg:h-56 overflow-hidden">
+          <div>
+            <div className="w-48 h-48 lg:w-56 lg:h-56 overflow-hidden scan-reveal">
               <img
                 src={`${import.meta.env.BASE_URL}fotoPerfil.webp`}
                 alt="Néstor Montenegro"
                 fetchPriority="high"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

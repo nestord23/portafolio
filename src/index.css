@@ -85,6 +85,43 @@
     border-right: 2px solid var(--color-lime-neon);
   }
 
+  .scan-reveal {
+    position: relative;
+  }
+
+  .scan-reveal::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-obsidian);
+    z-index: 2;
+    animation: scan-mask 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+    pointer-events: none;
+  }
+
+  .scan-reveal::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-lime-neon);
+    box-shadow: 0 0 8px var(--color-lime-neon), 0 0 20px var(--color-lime-glow);
+    z-index: 3;
+    animation: scan-line 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+    pointer-events: none;
+  }
+
+  @keyframes scan-mask {
+    0% { top: 0; bottom: 0; }
+    100% { top: 100%; bottom: -100%; }
+  }
+
+  @keyframes scan-line {
+    0% { top: -1px; }
+    100% { top: calc(100% - 2px); }
+  }
+
   .text-neon {
     color: var(--color-lime-neon);
   }
