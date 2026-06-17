@@ -146,11 +146,12 @@ const ShaderBackground = () => {
     window.addEventListener("resize", handleResize);
 
     let running = true;
-    const clock = new THREE.Clock();
+    const timer = new THREE.Timer();
 
     const animate = () => {
       if (!running) return;
-      const elapsed = clock.getElapsedTime();
+      timer.update();
+      const elapsed = timer.getElapsed();
 
       currentMouse.x += (targetMouse.x - currentMouse.x) * 0.05;
       currentMouse.y += (targetMouse.y - currentMouse.y) * 0.05;
