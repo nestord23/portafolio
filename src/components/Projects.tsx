@@ -52,7 +52,7 @@ const Projects = () => {
         "Chat en tiempo real con WebSockets, implementado en backend y frontend, para comunicación instantánea entre usuarios.",
       tech: ["React", "WebSockets", "Node.js"],
       githubUrl: "https://github.com/nestord23/chat_FE",
-      featured: false,
+      featured: true,
     },
     {
       id: 2,
@@ -61,16 +61,16 @@ const Projects = () => {
         "Aplicación Web para almacenar Lecturas y Realizar Clasificación de lecturas y Elegir Próximas lecturas",
       tech: ["Astro", "JavaScript", "CSS3", "Node.js"],
       githubUrl: "https://github.com/nestord23/book-picker-fe",
-      featured: false,
+      featured: true,
     },
     {
       id: 3,
-      title: "Control de Presupuesto",
+      title: "Money Control",
       description:
         "Aplicación para gestión y control de presupuestos personales. Permite registrar ingresos, gastos y visualizar el balance financiero.",
-      tech: ["React", "Local Storage", "Finance"],
-      githubUrl: "https://github.com/nestord23/proyecto-presupuesto",
-      featured: false,
+      tech: ["React", "", "Finance"],
+      githubUrl: "https://github.com/nestord23/MoneyControl_FE.git",
+      featured: true,
     },
     {
       id: 4,
@@ -89,17 +89,16 @@ const Projects = () => {
       tech: ["React", "HTML5", "CSS3"],
       githubUrl: "https://github.com/nestord23/el-senor-de-la-merced",
       demoUrl: "https://elsenordelamerced.vercel.app/",
-      featured: true,
+      featured: false,
     },
     {
       id: 6,
-      title: "Simsoms",
+      title: "SixEyes Bot",
       description:
-        "Aplicación web moderna desarrollada con React y TypeScript usando Vite.",
-      tech: ["React", "TypeScript", "Vite"],
-      githubUrl: "https://github.com/nestord23/simsoms",
-      demoUrl: "https://simsoms-green.vercel.app",
-      featured: true,
+        "Bot de Discord para buscar información de NBA, videos de YouTube y más, desarrollado con TypeScript y discord.js.",
+      tech: ["Node.js", "TypeScript", "API"],
+      githubUrl: "https://github.com/nestord23/sixeyes-bot",
+      featured: false,
     },
   ];
 
