@@ -74,12 +74,12 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Administrador de Clientes",
+      title: "MintForge",
       description:
-        "Sistema de gestión de clientes con funcionalidades CRUD completas. Permite agregar, editar, eliminar y buscar clientes de manera eficiente.",
-      tech: ["React", "CRUD", "Local Storage"],
-      githubUrl: "https://github.com/nestord23/Administrador-de-Clientes-React",
-      featured: false,
+        "Herramienta automatizada para crear colecciones NFT y acuñar NFTs vinculados a ellas.",
+      tech: ["Web3", "Node.js", "TypeScript"],
+      githubUrl: "https://github.com/nestord23/MintForge.git",
+      featured: true,
     },
     {
       id: 5,
