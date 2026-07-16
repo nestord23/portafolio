@@ -147,3 +147,11 @@
     background-clip: text;
   }
 }
+@keyframes grid-drift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-40px, -40px); }
+}
+
+.animate-grid-drift {
+  animation: grid-drift 20s linear infinite;
+}
