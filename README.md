@@ -1,9 +1,9 @@
 # Portafolio — Néstor Montenegro
 
-[![Deploy to GitHub Pages](https://github.com/nestord23/nestor-portafolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/nestord23/nestor-portafolio/actions/workflows/deploy.yml)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev)
+[![Deployed on Cloudflare Pages](https://img.shields.io/badge/Cloudflare_Pages-✓-F38020?logo=cloudflare)](https://nestor-portafolio.pages.dev)
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript)](https://www.typescriptlang.org)
-[![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite)](https://vite.dev)
+[![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?logo=vite)](https://vite.dev)
 
 Portafolio web profesional con diseño moderno, animaciones fluidas y arquitectura optimizada. Construido con React 19, TypeScript y Vite.
 
@@ -11,11 +11,11 @@ Portafolio web profesional con diseño moderno, animaciones fluidas y arquitectu
 
 | Categoría | Tecnologías |
 |-----------|-------------|
-| **Core** | React 19, TypeScript 5.8, Vite 7 |
-| **Animaciones** | Framer Motion 12, react-parallax-tilt, typewriter-effect |
-| **UI / Iconos** | Lucide React, React Icons |
-| **Estilos** | CSS3 Variables, Glassmorphism, diseño responsivo |
-| **Calidad** | ESLint, SWC (build rápido) |
+| **Core** | React 19.2, TypeScript 5.8, Vite 7.3 |
+| **Animaciones** | Framer Motion 12.40, Three.js 0.184, typewriter-effect |
+| **UI / Iconos** | Lucide React 0.525, React Icons 5.6 |
+| **Estilos** | Tailwind CSS 4.3, diseño responsivo |
+| **Calidad** | ESLint 9.39, TypeScript-Eslint 8.61 |
 
 ## Sobre mí
 
