@@ -1,7 +1,8 @@
-import { motion, type Variants } from "framer-motion";
+import { motion} from "framer-motion";
 import { Palette, Terminal, Layout, Code2, GitBranch, Eye } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 import SkillCard, { type SkillCategory } from "./SkillCard";
+import { fadeInUp } from "../lib/animations";
 
 interface Stat {
   label: string;
@@ -46,11 +47,6 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     skills: ["Scrum", "Ágil"],
   },
 ];
-
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
 
 const About = () => {
   return (
