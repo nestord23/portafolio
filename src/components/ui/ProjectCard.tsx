@@ -1,4 +1,4 @@
-import { motion, type Variants } from "framer-motion";
+import { m, type Variants } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { TechIcon } from "../../lib/techIcons";
 import type { Project } from "../../types/project";
@@ -50,7 +50,7 @@ const fadeInItem: Variants = {
 
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
   return (
-    <motion.div
+    <m.div
       custom={index}
       variants={cardVariants}
       initial="hidden"
@@ -59,16 +59,16 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       whileHover={{ y: -8, transition: { duration: 0.25, ease: "easeOut" } }}
       className="glass-panel rounded-lg overflow-hidden group relative"
     >
-      <motion.div
+      <m.div
         variants={cornerTopVariants}
         className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-lime-neon z-10"
       />
-      <motion.div
+      <m.div
         variants={cornerBottomVariants}
         className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-lime-neon z-10"
       />
 
-      <motion.div
+      <m.div
         variants={thumbnailVariants}
         className="relative h-44 bg-emerald-depth/30 flex items-center justify-center overflow-hidden"
       >
@@ -79,7 +79,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         />
         <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-obsidian to-transparent z-10" />
 
-        <motion.div
+        <m.div
           variants={iconBadgeVariants}
           whileHover={{
             opacity: 0.6,
@@ -91,10 +91,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           style={{ cursor: "default" }}
         >
           <TechIcon tech={project.tech[0]} size={48} />
-        </motion.div>
+        </m.div>
 
         {project.featured && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.8, x: 10 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.4 }}
@@ -103,30 +103,30 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             <span className="font-mono text-[10px] text-neon border border-lime-neon/30 px-2 py-0.5 tracking-wider bg-obsidian/80">
               DESTACADO
             </span>
-          </motion.div>
+          </m.div>
         )}
-      </motion.div>
+      </m.div>
 
       <div className="p-5">
-        <motion.h3
+        <m.h3
           variants={fadeInItem}
           className={`font-sora font-bold text-base mb-2 ${
             project.featured ? "gradient-text" : "text-white/90"
           }`}
         >
           {project.title}
-        </motion.h3>
+        </m.h3>
 
-        <motion.p
+        <m.p
           variants={fadeInItem}
           className="text-slate/60 text-xs leading-relaxed mb-4 line-clamp-3"
         >
           {project.description}
-        </motion.p>
+        </m.p>
 
-        <motion.div variants={fadeInItem} className="flex flex-wrap gap-1.5 mb-4">
+        <m.div variants={fadeInItem} className="flex flex-wrap gap-1.5 mb-4">
           {project.tech.map((tech, tIndex) => (
-            <motion.span
+            <m.span
               key={tech}
               initial={{ opacity: 0, scale: 0.85 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -135,13 +135,13 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             >
               <TechIcon tech={tech} />
               {tech}
-            </motion.span>
+            </m.span>
           ))}
-        </motion.div>
+        </m.div>
 
-        <motion.div variants={fadeInItem} className="flex gap-2">
+        <m.div variants={fadeInItem} className="flex gap-2">
           {project.demoUrl && (
-            <motion.a
+            <m.a
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -150,9 +150,9 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
               className="flex items-center gap-1.5 font-mono text-xs text-obsidian bg-lime-neon px-3 py-1.5 hover:bg-lime-neon/90 transition-colors"
             >
               <FaExternalLinkAlt size={10} aria-hidden="true" /> Demo
-            </motion.a>
+            </m.a>
           )}
-          <motion.a
+          <m.a
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -161,10 +161,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             className="flex items-center gap-1.5 font-mono text-xs text-neon border border-lime-neon/30 px-3 py-1.5 hover:bg-lime-neon/10 hover:border-lime-neon/50 transition-colors"
           >
             <FaGithub size={12} aria-hidden="true" /> Code
-          </motion.a>
-        </motion.div>
+          </m.a>
+        </m.div>
       </div>
-    </motion.div>
+    </m.div>
   );
 };
 

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-white/5">
       <div className="max-w-6xl mx-auto text-center">
-        <motion.div
+        <m.div
           className="text-slate/50 text-sm font-mono"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -14,9 +14,9 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <span>© {currentYear} Néstor Montenegro · Desarrollador Web</span>
-        </motion.div>
+        </m.div>
 
-        <motion.p
+        <m.p
           className="text-slate/40 text-xs font-mono mt-3"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -24,7 +24,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           Disponible para oportunidades profesionales
-        </motion.p>
+        </m.p>
       </div>
     </footer>
   );

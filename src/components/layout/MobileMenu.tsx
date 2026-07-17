@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import NavLink from "../ui/NavLink";
 
@@ -21,17 +21,18 @@ const MobileMenu = ({ isOpen, sections, activeSection, onNavigate, onClose }: Mo
       {isOpen && (
         <>
           {/* Overlay: cierra el menú al hacer click fuera */}
-          <motion.div
+          <m.div
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             onClick={onClose}
+            onKeyDown={(e) => { if (e.key === 'Escape') onClose(); }}
           />
 
           {/* Panel del menú */}
-          <motion.div
+          <m.div
             className="glass-panel fixed top-0 right-0 bottom-0 w-64 z-50 flex flex-col md:hidden"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
@@ -39,7 +40,7 @@ const MobileMenu = ({ isOpen, sections, activeSection, onNavigate, onClose }: Mo
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <div className="flex items-center justify-end p-6">
-              <button
+              <button type="button"
                 onClick={onClose}
                 aria-label="Cerrar menú"
                 className="text-slate hover:text-lime-neon transition-colors"
@@ -63,7 +64,7 @@ const MobileMenu = ({ isOpen, sections, activeSection, onNavigate, onClose }: Mo
                 ))}
               </ul>
             </nav>
-          </motion.div>
+          </m.div>
         </>
       )}
     </AnimatePresence>

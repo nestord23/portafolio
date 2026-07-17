@@ -1,4 +1,4 @@
-import { motion, type Variants } from "framer-motion";
+import { m, type Variants } from "framer-motion";
 
 interface SectionHeaderProps {
   title: string;
@@ -25,28 +25,28 @@ const subtitleVariants = fadeUp(12, 0.4);
 
 const SectionHeader = ({ title, subtitle, className = "" }: SectionHeaderProps) => {
   return (
-    <motion.div
+    <m.div
       className={`text-center mb-16 ${className}`}
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.4 }}
     >
-      <motion.h2
+      <m.h2
         variants={titleVariants}
         className="text-3xl md:text-4xl font-sora font-bold mb-4 gradient-text"
       >
         {title}
-      </motion.h2>
+      </m.h2>
       {subtitle && (
-        <motion.p
+        <m.p
           variants={subtitleVariants}
           className="text-slate/60 max-w-2xl mx-auto font-mono text-sm"
         >
           {subtitle}
-        </motion.p>
+        </m.p>
       )}
-    </motion.div>
+    </m.div>
   );
 };
 

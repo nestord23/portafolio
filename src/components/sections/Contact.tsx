@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Phone, Mail, Linkedin, Github, MapPin, type LucideIcon } from "lucide-react";
 import { fadeInUp, slideInLeft, slideInRight } from "../../lib/animations";
 import {
@@ -70,7 +70,7 @@ const Contact = () => {
   return (
     <section id="contacto" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <motion.div
+        <m.div
           className="text-center mb-16"
           variants={fadeInUp}
           initial="hidden"
@@ -84,10 +84,10 @@ const Contact = () => {
           <p className="font-mono text-sm text-slate/60">
             Abierto a oportunidades laborales en desarrollo web
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <motion.div
+          <m.div
             className="glass-panel rounded-lg p-8"
             variants={slideInLeft}
             initial="hidden"
@@ -112,7 +112,7 @@ const Contact = () => {
               {SOCIAL_LINKS.map((social) => {
                 const Icon = social.icon;
                 return (
-                  <motion.a
+                  <m.a
                     key={social.label}
                     href={social.url}
                     target="_blank"
@@ -123,13 +123,13 @@ const Contact = () => {
                     aria-label={social.label}
                   >
                     <Icon size={20} />
-                  </motion.a>
+                    </m.a>
                 );
               })}
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             className="glass-panel rounded-lg p-8"
             variants={slideInRight}
             initial="hidden"
@@ -158,7 +158,7 @@ const Contact = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

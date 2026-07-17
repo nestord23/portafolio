@@ -1,4 +1,4 @@
-import { motion} from "framer-motion";
+import { m } from "framer-motion";
 import { Palette, Terminal, Layout, Code2, GitBranch, Eye } from "lucide-react";
 import SectionHeader from "../ui/SectionHeader";
 import SkillCard, { type SkillCategory } from "../ui/SkillCard";
@@ -57,7 +57,7 @@ const About = () => {
           subtitle="Desarrollador Web con experiencia en React, JavaScript y TypeScript. Estudiante de Ingeniería en Sistemas."
         />
 
-        <motion.div
+        <m.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -78,7 +78,7 @@ const About = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto mb-16">
           {STATS.map((stat) => (

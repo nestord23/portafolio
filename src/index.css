@@ -155,3 +155,23 @@
 .animate-grid-drift {
   animation: grid-drift 20s linear infinite;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .glass-panel {
+    transition: none !important;
+  }
+
+  .glass-panel:hover {
+    border-color: rgba(171, 214, 0, 0.3) !important;
+    box-shadow: 0 0 20px rgba(171, 214, 0, 0.1) !important;
+  }
+}

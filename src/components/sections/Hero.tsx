@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { fadeInUp, scaleIn } from "../../lib/animations";
 import GridBackground from "../effects/GridBackground";
@@ -12,6 +12,8 @@ const TYPEWRITER_STRINGS: string[] = [
 ];
 
 const Hero = () => {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <section
       id="inicio"
@@ -20,7 +22,7 @@ const Hero = () => {
       <GridBackground />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-        <motion.div
+        <m.div
           className="flex-shrink-0"
           variants={scaleIn}
           initial="hidden"
@@ -35,9 +37,9 @@ const Hero = () => {
               className="w-full h-full object-cover"
             />
           </div>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="flex-1 text-center lg:text-left"
           variants={fadeInUp}
           initial="hidden"
@@ -56,16 +58,20 @@ const Hero = () => {
           </h1>
 
           <h2 className="text-lg md:text-xl font-mono text-slate mb-6 h-8">
-            <Typewriter
-              options={{
-                strings: TYPEWRITER_STRINGS,
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 50,
-                delay: 80,
-                cursor: "_",
-              }}
-            />
+            {prefersReducedMotion ? (
+              TYPEWRITER_STRINGS[0]
+            ) : (
+              <Typewriter
+                options={{
+                  strings: TYPEWRITER_STRINGS,
+                  autoStart: true,
+                  loop: true,
+                  deleteSpeed: 50,
+                  delay: 80,
+                  cursor: "_",
+                }}
+              />
+            )}
           </h2>
 
           <div className="flex flex-wrap gap-3 mb-6 justify-center lg:justify-start">
@@ -82,7 +88,7 @@ const Hero = () => {
             componentes reutilizables. Estudiante de Ingeniería en Sistemas con
             experiencia en metodologías ágiles y trabajo en equipo.
           </p>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

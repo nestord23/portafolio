@@ -1,5 +1,5 @@
   import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Menu } from "lucide-react";
 import NavLink from "../ui/NavLink";
 import MobileMenu from "./MobileMenu";
@@ -111,7 +111,7 @@ const Header = () => {
 
   return (
     <>
-      <motion.header
+      <m.header
         ref={headerRef}
         className={`header fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled ? "glass-panel backdrop-blur-2xl" : "bg-transparent"
@@ -121,7 +121,7 @@ const Header = () => {
         transition={{ duration: 0.3 }}
       >
         <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
-          <button
+          <button type="button"
             onClick={() => scrollToSection("inicio")}
             className="font-mono text-neon text-sm tracking-wider hover:opacity-80 transition-opacity"
           >
@@ -143,7 +143,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <button
+          <button type="button"
             onClick={() => setIsMobileMenuOpen(true)}
             aria-label="Abrir menú"
             className="md:hidden text-slate hover:text-lime-neon transition-colors"
@@ -151,7 +151,7 @@ const Header = () => {
             <Menu size={22} />
           </button>
         </div>
-      </motion.header>
+      </m.header>
 
       <MobileMenu
         isOpen={isMobileMenuOpen}

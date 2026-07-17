@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, type Variants } from "framer-motion";
+import { m, type Variants } from "framer-motion";
 import SectionHeader from "../ui/SectionHeader";
 import TimelineCanvas from "../effects/TimelineCanvas";
 
@@ -101,7 +101,7 @@ const Experience = () => {
           <TimelineCanvas containerRef={timelineRef} />
 
           {experiences.map((entry, index) => (
-            <motion.li
+            <m.li
               key={`${entry.company}-${entry.period}`}
               className="relative flex flex-col items-center"
               variants={fadeUp(index * 0.2)}
@@ -136,14 +136,14 @@ const Experience = () => {
                   </div>
                 </>
               )}
-            </motion.li>
+            </m.li>
           ))}
         </ol>
 
         {/* ─── Mobile: timeline vertical (sin Three.js) ─── */}
         <div className="flex flex-col md:hidden max-w-3xl mx-auto mb-20">
           {experiences.map((entry, index) => (
-            <motion.div
+            <m.div
               key={`${entry.company}-${entry.period}`}
               className="relative pl-6 pb-12 last:pb-0 border-l-2 border-lime-neon/20"
               variants={fadeUp(index * 0.2)}
@@ -153,11 +153,11 @@ const Experience = () => {
             >
               <div className="absolute left-0 top-2 w-3 h-3 rounded-full bg-lime-neon -translate-x-[7px] z-10" />
               <ExperienceCard entry={entry} />
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
-        <motion.div variants={fadeUp(0.4)} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <m.div variants={fadeUp(0.4)} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h3 className="text-center font-mono text-sm text-white/60 tracking-wider uppercase mb-8">
             Certificaciones y Educación
           </h3>
@@ -166,7 +166,7 @@ const Experience = () => {
               <CertificationCard key={cert.title} cert={cert} />
             ))}
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

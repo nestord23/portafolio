@@ -1,4 +1,4 @@
-import { motion, type Variants } from "framer-motion";
+import { m, type Variants } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 
 export interface SkillCategory {
@@ -21,7 +21,7 @@ const SkillCard = ({ category, index }: SkillCardProps) => {
   const Icon = category.icon;
 
   return (
-    <motion.div
+    <m.div
       className="glow-border p-5 pt-6 pb-6 h-full"
       variants={fadeInUp}
       initial="hidden"
@@ -44,7 +44,7 @@ const SkillCard = ({ category, index }: SkillCardProps) => {
           </span>
         ))}
       </div>
-    </motion.div>
+    </m.div>
   );
 };
 

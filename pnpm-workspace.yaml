@@ -1,3 +1,6 @@
 allowBuilds:
   '@swc/core': true
   esbuild: true
+
+minimumReleaseAge: 10080
+# trustPolicy: no-downgrade  # comentado temporalmente porque bloquea @trickfilm400/rollup-plugin-off-main-thread (workbox-build)
